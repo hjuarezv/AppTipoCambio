@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppTipoCambio.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="Green" Padding="30" CornerRadius="0">
+            <StackLayout>
+            <Label Text="Tipo de Cambio" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            <Label Text="{Binding dolar.fecha, StringFormat='{0:dd/MM/yyyy}'}" HorizontalTextAlignment="Center" TextColor="White" FontSize="Large"/>
+            </StackLayout>
+        </Frame>
+        <Image Source="img_tipocambio.png"/>
+        <Label Text="{Binding dolar.compra, StringFormat='Compra: S/. {0}'}" FontAttributes="Bold" FontSize="Title" Padding="30,10,30,10" HorizontalTextAlignment="Center"/>
+        <Label Text="{Binding dolar.venta, StringFormat='Venta: S/. {0}'}" FontAttributes="Bold" FontSize="Title" Padding="30,10,30,10" HorizontalTextAlignment="Center"/>
+        
+    </StackLayout>
+
+</ContentPage>
